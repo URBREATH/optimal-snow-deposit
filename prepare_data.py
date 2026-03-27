@@ -4,9 +4,9 @@ import numpy as np
 import osmnx as ox
 import networkx as nx
 
-ROADS_FPATH = "/Users/nefelikousta/Desktop/work/PhotoLab/projects/UrBREATH/data/Tallinn/optimal_snow_deposit_latitudo/tallinn_roads.geojson"
-DEP_MUN_FPATH = "/Users/nefelikousta/Desktop/work/PhotoLab/projects/UrBREATH/data/Tallinn/optimal_snow_deposit_latitudo/snow_capacity_municipality.geojson"
-DEP_GOV_FPATH = "/Users/nefelikousta/Desktop/work/PhotoLab/projects/UrBREATH/data/Tallinn/optimal_snow_deposit_latitudo/snow_capacity_government.geojson"
+ROADS_FPATH = "data/tallinn_roads.geojson"
+DEP_MUN_FPATH = "data/snow_capacity_municipality.geojson"
+DEP_GOV_FPATH = "data/snow_capacity_government.geojson"
 
 OUTPUT_DIR = "data_prepared/"
 print("Loading data...")
