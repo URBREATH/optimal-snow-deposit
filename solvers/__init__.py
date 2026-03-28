@@ -14,8 +14,9 @@ def solve_capacitated_p_median(
     Unified interface for capacitated p-median.
 
     method : "cpsat" or "cbc"
-    kwargs : extra arguments passed to the chosen solver
-             (e.g. cost_scale, time_limit_sec for cpsat)
+    kwargs : extra arguments passed to CP-SAT only
+             (cost_scale, time_limit_sec, num_workers, log_search_progress)
+             CBC does not accept additional arguments and ignores kwargs.
     """
     if method.lower() == "cpsat":
         return solve_capacitated_p_median_cpsat(
@@ -33,7 +34,6 @@ def solve_capacitated_p_median(
             capacities,
             p,
             allowed_indices,
-            **kwargs,
         )
     else:
         raise ValueError(f"Unknown method '{method}'. Use 'cpsat' or 'cbc'.")
