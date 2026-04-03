@@ -1,0 +1,11 @@
+services:
+  api:
+    build: .
+    container_name: urbreath_optimal_snow
+    ports:
+      - "8003:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    # volumes:
+    #   - .:/app
+    restart: always
