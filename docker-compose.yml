@@ -6,6 +6,6 @@ services:
       - "8003:8000"
     environment:
       - PYTHONUNBUFFERED=1
-    # volumes:
-    #   - .:/app
+    volumes:
+      - .data_prepared:/app/data_prepared
     restart: always

@@ -71,7 +71,9 @@ def solve_capacitated_p_median_cbc(cluster_dist_matrix,
 
     status = solver.Solve()
     if status != pywraplp.Solver.OPTIMAL:
-        raise RuntimeError(f"No optimal solution found (status = {status})")
+        # raise RuntimeError(f"No optimal solution found (status = {status})")
+        print("Failed....")
+        return None
 
     selected_depots = [j for j in range(n_depots) if x[j].solution_value() > 0.5]
 

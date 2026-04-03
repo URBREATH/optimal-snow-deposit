@@ -95,7 +95,9 @@ def solve_capacitated_p_median_cpsat(
     status = solver.Solve(model)
 
     if status not in (cp_model.OPTIMAL, cp_model.FEASIBLE):
-        raise RuntimeError(f"No solution found. CP-SAT status = {status}")
+        # raise RuntimeError(f"No solution found. CP-SAT status = {status}")
+        print("Failed....")
+        return None
 
     selected_depots = [j for j in range(n_depots) if solver.Value(x[j]) == 1]
 
